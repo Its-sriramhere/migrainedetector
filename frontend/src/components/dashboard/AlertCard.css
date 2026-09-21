@@ -1,0 +1,108 @@
+.alert-card {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: transform 200ms ease;
+}
+.alert-card:hover {
+  transform: translateY(-2px);
+}
+.alert-card.alert-high {
+  border-color: rgba(251, 113, 133, 0.4);
+  background: linear-gradient(145deg, rgba(251, 113, 133, 0.06), var(--surface));
+}
+.alert-card.alert-moderate {
+  border-color: rgba(251, 191, 36, 0.35);
+}
+.alert-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(251, 113, 133, 0.1);
+  color: var(--danger);
+}
+.alert-card.alert-moderate .alert-icon {
+  background: rgba(251, 191, 36, 0.1);
+  color: var(--warning);
+}
+.alert-body {
+  flex: 1;
+}
+.alert-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.alert-time {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+.alert-message {
+  margin: 9px 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.alert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.alert-feedback-done {
+  color: var(--success);
+  font-size: 12px;
+  font-weight: 600;
+}
+.btn-success {
+  color: var(--success);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+.alert-advice {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-left: 3px solid var(--ai);
+  border-radius: var(--radius-sm);
+  background: rgba(139, 92, 246, 0.06);
+}
+.alert-advice-title {
+  display: block;
+  color: var(--ai-soft);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+.alert-advice ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.alert-advice li {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.alert-advice li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ai);
+}

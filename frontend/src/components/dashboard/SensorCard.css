@@ -1,0 +1,44 @@
+.sensor-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 200ms ease;
+}
+.sensor-card:hover {
+  border-color: var(--primary);
+}
+.sensor-card-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.sensor-card-data {
+  display: flex;
+  flex-direction: column;
+}
+.sensor-card-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+.sensor-card-value {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+.sensor-card-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

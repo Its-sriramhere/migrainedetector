@@ -1,0 +1,24 @@
+/* Demo page layout */
+.demo-page {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+.demo-page-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .demo-page {
+    grid-template-columns: 1fr;
+  }
+}
+.demo-app-section {
+  padding: 34px 0;
+  border-top: 1px dashed var(--border);
+}
+.demo-app-section .section-subtitle {
+  max-width: 560px;
+}

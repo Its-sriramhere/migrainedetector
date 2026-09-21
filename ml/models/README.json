@@ -1,0 +1,3 @@
+{
+  "note": "Trained model artifacts go here: model.pkl, scaler.pkl, feature_schema.json. Created by src/train.py."
+}

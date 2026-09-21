@@ -1,0 +1,103 @@
+.onboarding-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.onboarding-progress {
+  margin-bottom: 30px;
+}
+.onboarding-progress span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+.onboarding-progress-track {
+  height: 6px;
+  margin-top: 10px;
+  background: #1a3047;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.onboarding-progress-fill {
+  height: 100%;
+  background: var(--gradient-brand);
+  border-radius: inherit;
+  transition: width 400ms ease;
+}
+.onboarding-body {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.onboarding-body.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.onboarding-question {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 14px 0 26px;
+}
+.onboarding-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.onboarding-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 200ms ease;
+  font-family: inherit;
+}
+.onboarding-option:hover {
+  border-color: var(--primary);
+}
+.onboarding-option.selected {
+  border-color: var(--primary);
+  background: rgba(34, 211, 238, 0.08);
+}
+.onboarding-option-check {
+  width: 19px;
+  height: 19px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 800;
+}
+.onboarding-option.selected .onboarding-option-check {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg);
+}
+.onboarding-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media (max-width: 640px) {
+  .onboarding-options {
+    grid-template-columns: 1fr;
+  }
+  .onboarding-card {
+    padding: 26px;
+  }
+}

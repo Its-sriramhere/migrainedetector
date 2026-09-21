@@ -1,0 +1,69 @@
+{
+  "calibrated": true,
+  "source_data": "migraine datasets + synthetic HR calibration",
+  "baselines": {
+    "heart_rate": 83.91,
+    "hrv": null,
+    "systolic_bp": 119.87,
+    "diastolic_bp": 78.02,
+    "spo2": 98.0,
+    "temperature": 36.4,
+    "activity": null
+  },
+  "band_edges": {
+    "low": 30,
+    "high": 70
+  },
+  "deviations": {
+    "static_floor": 8.0,
+    "hr_trigger_pct": 17.23,
+    "hr_weight": 0.52,
+    "hrv_trigger_pct": -5.0,
+    "hrv_weight": 0.8,
+    "bp_trigger_pct": 3.07,
+    "bp_weight": 0.85,
+    "spo2_drop": 0.6,
+    "spo2_contribution": 5.0,
+    "temp_dev": 0.2,
+    "temp_weight": 4.0,
+    "temp_cap": 6.0,
+    "activity_dev_factor": 0.35,
+    "activity_weight": 4.0,
+    "activity_cap": 6.0,
+    "sleep_weight": 0.8,
+    "sleep_cap": 10.0,
+    "stress_weight": 0.6,
+    "stress_cap": 8.0,
+    "trigger_weight": 0.9,
+    "trigger_cap": 6.0
+  },
+  "demo_presets": {
+    "normal": {
+      "hrv": 48,
+      "activity": 0.55,
+      "heart_rate": 85,
+      "systolic_bp": 120,
+      "diastolic_bp": 78,
+      "spo2": 98,
+      "temperature": 36.4
+    },
+    "moderate": {
+      "hrv": 40,
+      "activity": 0.4,
+      "heart_rate": 108,
+      "systolic_bp": 127,
+      "diastolic_bp": 82,
+      "spo2": 97,
+      "temperature": 36.6
+    },
+    "high": {
+      "hrv": 30,
+      "activity": 0.25,
+      "heart_rate": 132,
+      "systolic_bp": 143,
+      "diastolic_bp": 93,
+      "spo2": 98,
+      "temperature": 37.1
+    }
+  }
+}

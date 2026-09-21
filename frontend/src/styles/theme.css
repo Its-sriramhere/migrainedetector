@@ -1,0 +1,99 @@
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --bg-secondary: #0b1728;
+
+  --surface: #101f33;
+  --surface-hover: #14263d;
+
+  --primary: #22d3ee;
+  --primary-soft: #67e8f9;
+
+  --ai: #8b5cf6;
+  --ai-soft: #a78bfa;
+
+  --blue: #60a5fa;
+
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #fb7185;
+
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border: #1e334d;
+
+  --gradient-brand:
+    linear-gradient(90deg, #22d3ee, #8b5cf6, #60a5fa);
+
+  --gradient-ai:
+    linear-gradient(135deg, #8b5cf6, #22d3ee);
+
+  --gradient-risk:
+    linear-gradient(90deg, #34d399, #fbbf24, #fb7185);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+  --glow-cyan: 0 0 35px rgba(34, 211, 238, 0.18);
+  --glow-purple: 0 0 35px rgba(139, 92, 246, 0.18);
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a4565;
+}

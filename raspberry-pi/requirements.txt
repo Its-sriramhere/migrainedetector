@@ -1,0 +1,2 @@
+requests>=2.31
+# smbus2 is only needed for real I2C hardware (Raspberry Pi) - optional
