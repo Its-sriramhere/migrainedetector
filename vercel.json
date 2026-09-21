@@ -9,10 +9,10 @@
   },
   "builds": [
     { "src": "frontend/package.json", "use": "@vercel/node" },
-    { "src": "api.py", "use": "@vercel/python", "config": { "maxLambdaSize": "50mb" } }
+    { "src": "backend/api.py", "use": "@vercel/python", "config": { "maxLambdaSize": "50mb" } }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api.py" },
+    { "src": "/api/(.*)", "dest": "/backend/api.py" },
     { "src": "/(.*)", "dest": "frontend/$1" }
   ]
 }
