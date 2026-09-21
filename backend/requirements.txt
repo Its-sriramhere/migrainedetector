@@ -10,3 +10,4 @@ email-validator>=2.1
 websockets>=12.0
 twilio>=9.0        # real SMS provider (optional; mock works without it)
 psycopg[binary]>=3.2  # Supabase Postgres driver (optional; SQLite works without it)
+mangum>=0.22       # ASGI-to-WSGI adapter for Vercel serverless

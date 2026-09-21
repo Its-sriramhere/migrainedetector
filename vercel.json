@@ -1,0 +1,22 @@
+{
+  "builds": [
+    { "src": "frontend/package.json", "use": "@vercel/node" },
+    { "src": "vercel/api.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/vercel/api.py" },
+    { "src": "/(.*)", "dest": "frontend/$1" }
+  ],
+  "framework": null,
+  "regions": ["iad1"],
+  "env": {
+    "DATABASE_URL": "@DATABASE_URL",
+    "SECRET_KEY": "@SECRET_KEY",
+    "CORS_ORIGINS": "http://localhost:5173,https://migraine-detector.vercel.app",
+    "TWILIO_ACCOUNT_SID": "@TWILIO_ACCOUNT_SID",
+    "TWILIO_AUTH_TOKEN": "@TWILIO_AUTH_TOKEN",
+    "TWILIO_FROM_NUMBER": "@TWILIO_FROM_NUMBER",
+    "ALERT_SMS_TO": "@ALERT_SMS_TO",
+    "SMS_MAX_SENDS": "2"
+  }
+}
